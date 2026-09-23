@@ -1,33 +1,42 @@
-# 🏋️‍♂️ IronTracker
+# IronTracker
 
-> **Evolução de Cargas e Treinos**  
-> Um aplicativo mobile desenvolvido para quem leva o ferro a sério. Organize suas rotinas, monitore sua progressão de cargas e mantenha o foco na hipertrofia.
+Aplicativo mobile acadêmico para acompanhamento de treinos, desenvolvido com React Native, Expo e TypeScript.
 
-## 📱 Sobre o Projeto
+## Funcionalidades
 
-O **IronTracker** é um aplicativo mobile projetado para facilitar o registro de treinos de musculação e a estruturação de divisões de exercícios (como as clássicas rotinas ABC). 
+- Tela de login com validação de e-mail e senha.
+- Tela de cadastro com validação dos campos e confirmação de senha.
+- Componentes reutilizáveis de entrada e botão.
+- Navegação entre login e cadastro com Expo Router.
+- Interface adaptada ao teclado e a telas menores.
 
-Este projeto foi construído do zero como parte da disciplina de Desenvolvimento Mobile Híbrido no curso de Sistemas de Informação. O foco principal da arquitetura foi aplicar os melhores padrões de componentização, navegação moderna e gerenciamento de estado no ecossistema mobile.
+## Estrutura
 
-## 🚀 Principais Funcionalidades
+```text
+assets/
+  images/           Imagens e ícones do aplicativo
+src/
+  app/              Telas e rotas do Expo Router
+  components/       Componentes reutilizáveis
+app.json            Configuração do Expo
+package.json        Dependências e comandos
+tsconfig.json       Configuração do TypeScript
+```
 
-* **Onboarding e Autenticação:** Telas de Login e Cadastro desenvolvidas com foco em conversão e usabilidade.
-* **Validação de Formulários:** Sistema robusto que impede submissões com campos vazios e garante a exata correspondência de senhas na criação da conta através da manipulação de estados (`useState`).
-* **Componentização Inteligente:** Componentes de interface (`Input` e `Button`) 100% reutilizáveis e escaláveis, construídos para herdar propriedades nativas de forma dinâmica.
-* **UX/UI Responsiva:** Interfaces fluidas construídas com `KeyboardAvoidingView` e `ScrollView` para garantir que o teclado do sistema não prejudique a navegação do usuário em nenhum momento.
-* **Roteamento Dinâmico:** Fluxo entre telas gerenciado de forma limpa através da navegação por pastas do `expo-router`.
+## Como executar
 
-## 🛠️ Tecnologias Utilizadas
+Requisitos: Node.js 22 ou superior e o aplicativo Expo Go no dispositivo móvel.
 
-* **React Native:** Framework principal para desenvolvimento nativo multiplataforma.
-* **Expo:** Ferramenta para estruturação, testes rápidos e compilação do projeto.
-* **TypeScript:** Tipagem estática para um código mais seguro, escalável e fácil de manter.
-* **Expo Router:** Sistema de navegação moderno baseado na estrutura de arquivos.
+```bash
+npm install
+npm start
+```
 
-## ⚙️ Como Executar Localmente
+Depois, escaneie o QR Code exibido no terminal com o Expo Go.
 
-Para rodar o aplicativo na sua máquina e testar no seu celular, siga os passos abaixo:
+## Verificações
 
-1. **Clone o repositório:**
-   ```bash
-   git clone [https://github.com/alvs077/ATIVIDADE-Mobile-Hibrido.git](https://github.com/alvs077/ATIVIDADE-Mobile-Hibrido.git)
+```bash
+npm run lint
+npx tsc --noEmit
+```
